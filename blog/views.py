@@ -1,8 +1,10 @@
 from django.http.response import HttpResponse
+from django.http.response import HttpResponse
 from django.shortcuts import render
 from django.http import HttpRequest
 
-
 # Create your views here.
-def index(request):
-    return render(request, 'landingPage/index.html')
+
+
+def index(req):
+    return render(req, 'blog/index.html')
