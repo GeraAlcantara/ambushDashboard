@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
+{% load sass_tags %}
+    {% block page_title %}Inicio LandingPage{% endblock page_title %} 
+{% block content %}
+{% block css_files %}<link rel="stylesheet" href="{% sass_src 'landingPage/css/main.scss' %}"  type="text/css" >{% endblock css_files %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page </title>
-</head>
-
-<body>
     <header>
         <nav>
             <ul>
@@ -17,6 +12,7 @@
             </ul>
         </nav>
     </header>
+
     <main>
         <h1>Hola Banda 😎</h1>
         <h2>My fuck#$@ amazing Page</h2>
@@ -51,7 +47,12 @@
             <p>jajajaja</p>
         </address>
     </footer>
+{% endblock content %}
 
-</body>
+
+
+    
+
+
 
 </html>
