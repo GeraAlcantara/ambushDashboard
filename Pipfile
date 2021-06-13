@@ -6,9 +6,13 @@ name = "pypi"
 [packages]
 libsass = "*"
 django-sass-processor = "*"
+django-environ = "*"
 
 [dev-packages]
 pylint = "*"
 
 [requires]
 python_version = "3.9"
+
+[scripts]
+server = "py manage.py runserver"
