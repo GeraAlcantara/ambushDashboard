@@ -20,4 +20,5 @@ assets/bundles/script-dev-main.js
 assets/bundles/script-dev-main.js.map
 
 # settings vs code 
-settings.json
+
+.vscode/settings.json
