@@ -1,5 +1,17 @@
 {
-    "python.pythonPath": "c:\\Users\\gerar\\.virtualenvs\\ambushDashboard-PLQ82HPI\\Scripts\\python.exe",
-    "python.linting.pylintEnabled": true,
-    "python.linting.enabled": true
+  "python.pythonPath": "c:\\Users\\gerar\\.virtualenvs\\ambushDashboard-PLQ82HPI\\Scripts\\python.exe",
+  "python.linting.pylintEnabled": true,
+  "python.linting.enabled": true,
+  "files.associations": {
+    "**/*.html": "html",
+    "**/templates/**/*.html": "django-html",
+    "**/templates/**/*": "django-txt",
+    "**/requirements{/**,*}.{txt,in}": "pip-requirements"
+  },
+  "beautify.language": {
+    "html": ["htm", "html", "django-html"]
+  },
+  "editor.defaultFormatter": "HookyQR.beautify",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true
 }

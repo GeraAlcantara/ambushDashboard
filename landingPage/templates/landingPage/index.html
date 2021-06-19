@@ -1,20 +1,91 @@
 {% extends 'base.html' %}
+{% load static %}
 {% load sass_tags %}
-    {% block page_title %}Inicio LandingPage{% endblock page_title %} 
+{% block page_title %}Inicio LandingPage{% endblock page_title %}
 {% block content %}
-{% block css_files %}<link rel="stylesheet" href="{% sass_src 'landingPage/css/main.scss' %}"  type="text/css" >{% endblock css_files %}
+{% block css_files %}
+<link rel="stylesheet" href="{% sass_src 'landingPage/css/main.scss' %}" type="text/css">{% endblock css_files %}
+<link rel="stylesheet" href=" {% static 'css/normalize.css' %} ">
 
-    <header>
+<div class="wrapper-page">
+
+    <aside>
+        <div class="profile">
+            <picture>
+                <source srcset="{% static 'landingPage/assets/avatar1.png' %} " media="(min-width: 800px)">
+                <img src="/media/cc0-images/painted-hand-298-332.jpg" alt="" class="profile_avatar" />
+            </picture>
+            <p>Jun 19, 2021</p>
+            <p>01:45 pm</p>
+        </div>
+
         <nav>
             <ul>
-                <li>Inicio</li>
-                <li>Blog</li>
+                <li>
+                    <img src="" alt="">
+                    <span>Home</span>
+                    <span>º</span>
+                </li>
+                <li>
+                    <img src="" alt="">
+                    <span>Blog</span>
+                    <span>º</span>
+                </li>
+                <li>
+                    <img src="" alt="">
+                    <span>Seccion1</span>
+                    <span>º</span>
+                </li>
+                <li>
+                    <img src="" alt="">
+                    <span>Seccion2</span>
+                    <span>º</span>
+                </li>
+                <li>
+                    <img src="" alt="">
+                    <span>Seccion3</span>
+                    <span>º</span>
+                </li>
+                <li>
+                    <img src="" alt="">
+                    <span>Seccion4</span>
+                    <span>º</span>
+                </li>
             </ul>
         </nav>
-    </header>
 
-    <main>
-        <h1>Hola Banda 😎</h1>
+        <div class="card-calltoAction">
+            <div class="card-calltoAction_col">
+                <p>Noticias en una caja</p>
+                <p>La caja que necesitas</p>
+                <button>Upgrade</button>
+            </div>
+            <div>
+                <picture class="card-calltoAction_img">
+                    <source srcset="/media/cc0-images/surfer-240-200.jpg" media="(min-width: 800px)">
+                    <img src="/media/cc0-images/painted-hand-298-332.jpg" alt="se pasan" />
+                </picture>
+            </div>
+
+        </div>
+    </aside>
+
+    <main class="wrapper-main">
+        <header>
+            <div class="grettings">
+
+                <img src="{% static 'landingPage/assets/sun_icon.png' %} " alt="svg solesito">
+                <div class="wrapper-grettings-name">
+                    <h1>Buenos días,
+                        <span>Ambushinmid</span></h1>
+                </div>
+            </div>
+            <div class="input-search">
+                <input type="search" rol="combobox" placeholder="Search for articles">
+                <input type="submit" value="">
+            </div>
+        </header>
+        <h1>Hola Banda que cosas 😎</h1>
         <h2>My fuck#$@ amazing Page</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum delectus et accusamus quisquam recusandae
             aliquid debitis quaerat consectetur eaque tempore.</p>
@@ -22,18 +93,26 @@
             explicabo neque excepturi dolore repudiandae optio modi laborum, delectus magnam. Maiores architecto eaque
             perspiciatis esse? Voluptas eius adipisci provident labore iure vel a. Sed, voluptatem minus placeat saepe
             deserunt, laudantium quae mollitia unde similique est odit.</p>
+        <section>
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt sit sapiente dolorem, deserunt
+                beatae
+                modi, iure mollitia quos accusamus sunt voluptatibus odit atque libero voluptas dolor, in deleniti ipsa
+                eos
+                ipsam provident hic enim veritatis recusandae? Tempore repellendus amet, sint, quasi perferendis,
+                consequatur architecto ratione nemo maxime tenetur provident esse doloremque porro quas totam distinctio
+                aspernatur dolore? Placeat quo facilis consectetur quidem. Expedita amet tenetur placeat mollitia
+                doloremque
+                maiores aliquid, dolorem ullam distinctio sequi dolores alias incidunt temporibus ex reprehenderit
+                impedit
+                delectus quis, officiis molestiae obcaecati aut quam ipsum.</p>
+            <div>
+                <p></p>
+
+            </div>
+        </section>
     </main>
 
-    <section>
-        <h2>Lorem ipsum dolor sit amet.</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt sit sapiente dolorem, deserunt beatae
-            modi, iure mollitia quos accusamus sunt voluptatibus odit atque libero voluptas dolor, in deleniti ipsa eos
-            ipsam provident hic enim veritatis recusandae? Tempore repellendus amet, sint, quasi perferendis,
-            consequatur architecto ratione nemo maxime tenetur provident esse doloremque porro quas totam distinctio
-            aspernatur dolore? Placeat quo facilis consectetur quidem. Expedita amet tenetur placeat mollitia doloremque
-            maiores aliquid, dolorem ullam distinctio sequi dolores alias incidunt temporibus ex reprehenderit impedit
-            delectus quis, officiis molestiae obcaecati aut quam ipsum.</p>
-    </section>
 
     <footer>
         <h3>Mi Info</h3>
@@ -47,12 +126,8 @@
             <p>jajajaja</p>
         </address>
     </footer>
-{% endblock content %}
-
-
-
-    
-
-
+    {% endblock content %}
+</div>
+foo
 
 </html>
