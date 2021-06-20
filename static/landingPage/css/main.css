@@ -79,7 +79,8 @@ header {
   fill: #6C8393; }
 
 nav {
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 65px; }
   nav ul {
     width: 100%;
     list-style: none;
@@ -120,13 +121,13 @@ nav {
           width: 100%; }
         @media (hover) {
           nav ul li a:hover .wrapper-link_icon {
-            background-color: #b2c1ff; }
+            background-color: #1946ff; }
             nav ul li a:hover .wrapper-link_icon svg .iconFill {
               fill: white; }
           nav ul li a:hover .wrapper-link_text {
             color: #2f3035; }
             nav ul li a:hover .wrapper-link_text span:nth-child(2) {
-              background-color: #b2c1ff;
+              background-color: #1946ff;
               width: 10px;
               height: 10px;
               border-radius: 50%; } }
@@ -134,27 +135,67 @@ nav {
           transform: scale(1.08);
           outline: none; }
           nav ul li a:focus .wrapper-link_icon {
-            background-color: #b2c1ff; }
+            background-color: #1946ff; }
             nav ul li a:focus .wrapper-link_icon svg .iconFill {
               fill: white; }
           nav ul li a:focus .wrapper-link_text {
             color: #2f3035; }
             nav ul li a:focus .wrapper-link_text span:nth-child(2) {
-              background-color: #b2c1ff;
+              background-color: #1946ff;
               width: 10px;
               height: 10px;
               border-radius: 50%; }
         nav ul li a:active .wrapper-link_icon {
-          background-color: #b2c1ff; }
+          background-color: #1946ff; }
           nav ul li a:active .wrapper-link_icon svg .iconFill {
             fill: white; }
         nav ul li a:active .wrapper-link_text {
           color: #2f3035; }
           nav ul li a:active .wrapper-link_text span:nth-child(2) {
-            background-color: #b2c1ff;
+            background-color: #1946ff;
             width: 10px;
             height: 10px;
             border-radius: 50%; }
+
+/* Card Call to action */
+.card-calltoAction {
+  background-color: #4c6fff;
+  display: flex;
+  padding: 1rem 1rem;
+  border-radius: 20px;
+  align-items: center; }
+  .card-calltoAction .card-calltoAction_col {
+    width: 85%;
+    color: white;
+    font-size: 0.65rem;
+    font-weight: 300;
+    margin-right: 0.5rem; }
+    .card-calltoAction .card-calltoAction_col p:nth-child(1) {
+      font-size: 0.85rem;
+      font-weight: 500; }
+    .card-calltoAction .card-calltoAction_col button {
+      display: inline-block;
+      border: none;
+      padding: 0.65rem 1.75rem;
+      margin: 0;
+      text-decoration: none;
+      background: #3355df;
+      color: #ffffff;
+      border-radius: 10px;
+      font-size: 0.75rem;
+      cursor: pointer;
+      text-align: center;
+      transition: background 250ms ease-in-out, transform 150ms ease;
+      -webkit-appearance: none;
+      -moz-appearance: none; }
+    .card-calltoAction .card-calltoAction_col button:hover,
+    .card-calltoAction .card-calltoAction_col button:focus {
+      background: #0053ba; }
+    .card-calltoAction .card-calltoAction_col button:focus {
+      outline: 1px solid #fff;
+      outline-offset: -4px; }
+    .card-calltoAction .card-calltoAction_col button:active {
+      transform: scale(0.99); }
 
 /* @keyframes scaleDown {
     from {

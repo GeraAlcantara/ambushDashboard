@@ -8,6 +8,8 @@ $NavBg: #ecf0f3;
 $hoverNavColor: #2f3035;
 $hoverNavBg: #4c6fff;
 
+$accentDarkcolor: #3355df;
+
 * {
     box-sizing: border-box;
 }
@@ -123,6 +125,7 @@ header {
 
 nav {
     width: 100%;
+    margin-bottom: 65px;
 
     ul {
         width: 100%;
@@ -201,7 +204,7 @@ nav {
                                 fill: white;
                             }
 
-                            background-color: lighten($hoverNavBg, 20%);
+                            background-color: darken($hoverNavBg, 10%);
 
                         }
 
@@ -209,7 +212,7 @@ nav {
                             color: $hoverNavColor;
 
                             span:nth-child(2) {
-                                background-color: lighten($hoverNavBg, 20%);
+                                background-color: darken($hoverNavBg, 10%);
                                 width: 10px;
                                 height: 10px;
                                 border-radius: 50%;
@@ -230,7 +233,7 @@ nav {
                             fill: white;
                         }
 
-                        background-color: lighten($hoverNavBg, 20%);
+                        background-color: darken($hoverNavBg, 10%);
 
                     }
 
@@ -238,7 +241,7 @@ nav {
                         color: $hoverNavColor;
 
                         span:nth-child(2) {
-                            background-color: lighten($hoverNavBg, 20%);
+                            background-color: darken($hoverNavBg, 10%);
                             width: 10px;
                             height: 10px;
                             border-radius: 50%;
@@ -253,7 +256,7 @@ nav {
                             fill: white;
                         }
 
-                        background-color: lighten($hoverNavBg, 20%);
+                        background-color: darken($hoverNavBg, 10%);
 
                     }
 
@@ -261,7 +264,7 @@ nav {
                         color: $hoverNavColor;
 
                         span:nth-child(2) {
-                            background-color: lighten($hoverNavBg, 20%);
+                            background-color: darken($hoverNavBg, 10%);
                             width: 10px;
                             height: 10px;
                             border-radius: 50%;
@@ -272,6 +275,63 @@ nav {
             }
 
         }
+    }
+}
+
+/* Card Call to action */
+
+.card-calltoAction {
+    background-color: $hoverNavBg;
+    display: flex;
+    padding: 1rem 1rem;
+    border-radius: 20px;
+    align-items: center;
+
+    .card-calltoAction_col {
+        width: 85%;
+        color: white;
+        font-size: 0.65rem;
+        font-weight: 300;
+        margin-right: 0.5rem;
+
+        p:nth-child(1) {
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+
+        button {
+            display: inline-block;
+            border: none;
+            padding: 0.65rem 1.75rem;
+            margin: 0;
+            text-decoration: none;
+            background: $accentDarkcolor;
+            color: #ffffff;
+            border-radius: 10px;
+            font-size: 0.75rem;
+            cursor: pointer;
+            text-align: center;
+            transition: background 250ms ease-in-out,
+                transform 150ms ease;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+        }
+
+        button:hover,
+        button:focus {
+            background: #0053ba;
+        }
+
+        button:focus {
+            outline: 1px solid #fff;
+            outline-offset: -4px;
+        }
+
+        button:active {
+            transform: scale(0.99);
+        }
+
     }
 }
 
