@@ -18,3 +18,4 @@ python_version = "3.9"
 
 [scripts]
 server = "py manage.py runserver"
+livereload = "py manage.py livereload"

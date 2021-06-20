@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import environ
+import os
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -150,6 +151,7 @@ STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
     'sass_processor.finders.CssFinder',
 ]
+
 STATIC_ROOT = 'static'
 
 SASS_PROCESSOR_ROOT = STATIC_ROOT

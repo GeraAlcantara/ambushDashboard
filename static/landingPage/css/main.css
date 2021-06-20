@@ -1,9 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700;800;900&display=swap");
 /* nav colors */
+/* reset button styles */
 * {
   box-sizing: border-box; }
 
-/* reset button styles */
+img {
+  width: 100%; }
+
 button {
   display: inline-block;
   border: none;
@@ -26,6 +29,23 @@ button {
     outline-offset: -4px; }
   button:active {
     transform: scale(0.99); }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 150px;
+  margin-left: 1rem;
+  margin-right: 1rem; }
+
+.grettings {
+  display: flex; }
+  .grettings * {
+    padding-right: 1rem; }
+  .grettings img {
+    width: 64px;
+    align-self: center;
+    margin: 0 auto; }
 
 body {
   background-color: white;
@@ -88,23 +108,6 @@ main {
     font-weight: 300;
     font-size: 1rem;
     margin-top: 0px; }
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 150px;
-  margin-left: 1rem;
-  margin-right: 1rem; }
-
-.grettings {
-  display: flex; }
-  .grettings * {
-    padding-right: 1rem; }
-  .grettings img {
-    width: 64px;
-    align-self: center;
-    margin: 0 auto; }
 
 /* Navigation dahsboard */
 .iconFill {
@@ -222,9 +225,9 @@ nav {
 /* Main Styles */
 .col-2_bigleft {
   position: relative;
-  top: -20px;
+  top: -30px;
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
   gap: 3rem;
   width: 95%;
   margin: 0 auto; }
@@ -237,8 +240,11 @@ nav {
 .card-post-main {
   display: flex;
   padding: 0.5rem;
-  justify-content: space-evenly; }
+  justify-content: space-between;
+  grid-column: 1 / 3; }
   .card-post-main__img {
+    width: 50%;
+    max-height: 260px;
     margin-right: 35px; }
     .card-post-main__img img {
       width: 100%;
@@ -252,17 +258,15 @@ nav {
     .card-post-main__excerpt h3 {
       color: #738998;
       font-weight: 500;
-      font-size: 2rem; }
+      margin-bottom: 0; }
     .card-post-main__excerpt p {
       color: #2f3035;
-      font-size: 2rem;
+      font-size: 1.5rem;
       line-height: 1.25;
       margin: 0; }
   .card-post-main__info {
     display: flex;
-    align-items: center;
-    margin-bottom: 2rem;
-    margin-top: 2rem; }
+    align-items: center; }
     .card-post-main__info .avatar {
       align-self: flex-end;
       width: 100px;
@@ -304,7 +308,7 @@ nav {
         margin: 0;
         color: #2f3035;
         margin-bottom: 1rem;
-        font-size: 1.75rem; }
+        font-size: 1.25rem; }
       .card-post-capsule .capsule-content p {
         color: #738998;
         margin: 0;
@@ -319,7 +323,8 @@ nav {
   .card-post-capsule .weatherInfo {
     width: 90%;
     margin: 0 auto;
-    background-color: white; }
+    background-color: white;
+    padding-bottom: 1rem; }
     .card-post-capsule .weatherInfo h3 {
       font-size: 1.5rem;
       margin-bottom: 0.5rem; }
