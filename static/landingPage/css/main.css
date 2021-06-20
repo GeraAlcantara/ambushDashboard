@@ -3,15 +3,42 @@
 * {
   box-sizing: border-box; }
 
+/* reset button styles */
+button {
+  display: inline-block;
+  border: none;
+  padding: 0.65rem 1.75rem;
+  margin: 0;
+  text-decoration: none;
+  background: #3355df;
+  color: #ffffff;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none; }
+  button:hover, button:focus {
+    background: #0053ba; }
+  button:focus {
+    outline: 1px solid #fff;
+    outline-offset: -4px; }
+  button:active {
+    transform: scale(0.99); }
+
 body {
   background-color: white;
-  font-family: 'Poppins', sans-serif; }
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  overflow: hidden; }
 
 .wrapper-page {
   display: grid;
   grid-template-columns: 300px auto;
-  grid-template-rows: 90vh 10vh;
-  grid-template-areas: "aside main" "footer footer"; }
+  grid-template-rows: 100vh;
+  /* 90vh 10vh */
+  grid-template-areas: "aside main"; }
 
 .wrapper-link_icon {
   width: 40px;
@@ -26,9 +53,13 @@ body {
   display: flex;
   justify-content: space-between; }
 
-footer {
-  grid-area: footer; }
+.wrapper-content {
+  background-color: #f4f7f9;
+  height: 100%; }
 
+/* footer {
+    grid-area: footer;
+} */
 aside {
   margin: 0 30px 0 50px;
   margin-top: 1rem;
@@ -174,23 +205,13 @@ nav {
       font-size: 0.85rem;
       font-weight: 500; }
     .card-calltoAction .card-calltoAction_col button {
-      display: inline-block;
-      border: none;
-      padding: 0.65rem 1.75rem;
-      margin: 0;
-      text-decoration: none;
       background: #3355df;
       color: #ffffff;
       border-radius: 10px;
-      font-size: 0.75rem;
-      cursor: pointer;
-      text-align: center;
-      transition: background 250ms ease-in-out, transform 150ms ease;
-      -webkit-appearance: none;
-      -moz-appearance: none; }
+      font-size: 0.75rem; }
     .card-calltoAction .card-calltoAction_col button:hover,
     .card-calltoAction .card-calltoAction_col button:focus {
-      background: #0053ba; }
+      background: #173095; }
     .card-calltoAction .card-calltoAction_col button:focus {
       outline: 1px solid #fff;
       outline-offset: -4px; }
