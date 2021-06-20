@@ -12,8 +12,9 @@
     <aside>
         <div class="profile">
             <picture>
-                <source srcset="{% static 'landingPage/assets/avatar1.png' %} " media="(min-width: 800px)">
-                <img src="/media/cc0-images/painted-hand-298-332.jpg" alt="" class="profile_avatar" />
+                <source srcset="{% static 'landingPage/assets/avatar1.png' %} " media="(min-width: 64px)">
+                <img src="{% static 'landingPage/assets/avatar1.png' %}" alt="avatar ambush in mid"
+                    class="profile_avatar" />
             </picture>
             <p>Jun 19, 2021</p>
             <p>01:45 pm</p>
@@ -21,35 +22,114 @@
 
         <nav>
             <ul>
-                <li>
-                    <img src="" alt="">
-                    <span>Home</span>
-                    <span>º</span>
+                <li class="current">
+                    <a href="#">
+                        <div class="wrapper-link_icon ">
+                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100"
+                                style="enable-background:new 0 0 100 100;" xml:space="preserve">
+                                <g>
+                                    <path class="iconFill"
+                                        d="M83.8,89.6H16.2c-1.2,0-2.3-1-2.3-2.3V34.4c0-0.8,0.4-1.5,1-1.9l33.7-21.8c0.7-0.5,1.7-0.5,2.4,0l34,21.5 c0.7,0.4,1,1.1,1,1.9v53.2C86.1,88.6,85.1,89.6,83.8,89.6z M18.4,85.1h63.2V35.4L49.9,15.3L18.4,35.7V85.1z" />
+                                </g>
+                            </svg>
+                            {% comment %} home icon design by By SIYEONG PARK, KR {% endcomment %}
+                        </div>
+                        <div class="wrapper-link_text">
+                            <span>Home</span>
+                            <span></span>
+                        </div>
+                    </a>
                 </li>
                 <li>
-                    <img src="" alt="">
-                    <span>Blog</span>
-                    <span>º</span>
+                    <a href="#">
+                        <div class="wrapper-link_icon ">
+                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100"
+                                style="enable-background:new 0 0 100 100;" xml:space="preserve">
+                                <g>
+                                    <path class="iconFill"
+                                        d="M83.8,89.6H16.2c-1.2,0-2.3-1-2.3-2.3V34.4c0-0.8,0.4-1.5,1-1.9l33.7-21.8c0.7-0.5,1.7-0.5,2.4,0l34,21.5 c0.7,0.4,1,1.1,1,1.9v53.2C86.1,88.6,85.1,89.6,83.8,89.6z M18.4,85.1h63.2V35.4L49.9,15.3L18.4,35.7V85.1z" />
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="wrapper-link_text">
+                            <span>Blog</span>
+                            <span class="active"></span>
+                        </div>
+                    </a>
                 </li>
                 <li>
-                    <img src="" alt="">
-                    <span>Seccion1</span>
-                    <span>º</span>
+                    <a href="#">
+                        <div class="wrapper-link_icon ">
+                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100"
+                                style="enable-background:new 0 0 100 100;" xml:space="preserve">
+                                <g>
+                                    <path class="iconFill"
+                                        d="M83.8,89.6H16.2c-1.2,0-2.3-1-2.3-2.3V34.4c0-0.8,0.4-1.5,1-1.9l33.7-21.8c0.7-0.5,1.7-0.5,2.4,0l34,21.5 c0.7,0.4,1,1.1,1,1.9v53.2C86.1,88.6,85.1,89.6,83.8,89.6z M18.4,85.1h63.2V35.4L49.9,15.3L18.4,35.7V85.1z" />
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="wrapper-link_text">
+                            <span>Section1</span>
+                            <span class="active"></span>
+                        </div>
+                    </a>
                 </li>
                 <li>
-                    <img src="" alt="">
-                    <span>Seccion2</span>
-                    <span>º</span>
+                    <a href="#">
+                        <div class="wrapper-link_icon ">
+                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100"
+                                style="enable-background:new 0 0 100 100;" xml:space="preserve">
+                                <g>
+                                    <path class="iconFill"
+                                        d="M83.8,89.6H16.2c-1.2,0-2.3-1-2.3-2.3V34.4c0-0.8,0.4-1.5,1-1.9l33.7-21.8c0.7-0.5,1.7-0.5,2.4,0l34,21.5 c0.7,0.4,1,1.1,1,1.9v53.2C86.1,88.6,85.1,89.6,83.8,89.6z M18.4,85.1h63.2V35.4L49.9,15.3L18.4,35.7V85.1z" />
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="wrapper-link_text">
+                            <span>Section2</span>
+                            <span class="active"></span>
+                        </div>
+                    </a>
                 </li>
                 <li>
-                    <img src="" alt="">
-                    <span>Seccion3</span>
-                    <span>º</span>
+                    <a href="#">
+                        <div class="wrapper-link_icon ">
+                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100"
+                                style="enable-background:new 0 0 100 100;" xml:space="preserve">
+                                <g>
+                                    <path class="iconFill"
+                                        d="M83.8,89.6H16.2c-1.2,0-2.3-1-2.3-2.3V34.4c0-0.8,0.4-1.5,1-1.9l33.7-21.8c0.7-0.5,1.7-0.5,2.4,0l34,21.5 c0.7,0.4,1,1.1,1,1.9v53.2C86.1,88.6,85.1,89.6,83.8,89.6z M18.4,85.1h63.2V35.4L49.9,15.3L18.4,35.7V85.1z" />
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="wrapper-link_text">
+                            <span>Section3</span>
+                            <span class="active"></span>
+                        </div>
+                    </a>
                 </li>
                 <li>
-                    <img src="" alt="">
-                    <span>Seccion4</span>
-                    <span>º</span>
+                    <a href="#">
+                        <div class="wrapper-link_icon ">
+                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100"
+                                style="enable-background:new 0 0 100 100;" xml:space="preserve">
+                                <g>
+                                    <path class="iconFill"
+                                        d="M83.8,89.6H16.2c-1.2,0-2.3-1-2.3-2.3V34.4c0-0.8,0.4-1.5,1-1.9l33.7-21.8c0.7-0.5,1.7-0.5,2.4,0l34,21.5 c0.7,0.4,1,1.1,1,1.9v53.2C86.1,88.6,85.1,89.6,83.8,89.6z M18.4,85.1h63.2V35.4L49.9,15.3L18.4,35.7V85.1z" />
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="wrapper-link_text">
+                            <span>Section4</span>
+                            <span class="active"></span>
+                        </div>
+                    </a>
                 </li>
             </ul>
         </nav>
