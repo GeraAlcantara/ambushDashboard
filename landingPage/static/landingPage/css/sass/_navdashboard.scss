@@ -163,9 +163,10 @@ nav {
 .card-calltoAction {
     background-color: $hoverNavBg;
     display: flex;
-    padding: 1rem 1rem;
+    padding: 0.5rem 1rem;
     border-radius: 20px;
     align-items: center;
+    width: 100%;
 
     .card-calltoAction_col {
         width: 85%;
@@ -201,6 +202,10 @@ nav {
         button:active {
             transform: scale(0.99);
         }
+    }
 
+    &_img {
+        max-width: 100px;
+        min-width: 50px;
     }
 }

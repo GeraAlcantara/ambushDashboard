@@ -212,17 +212,19 @@
                 <img src="{% static 'landingPage/assets/sun_icon.png' %} " alt="svg solesito">
                 <div class="wrapper-grettings-name">
                     <h1>Buenos días,
-                        <span>Ambushinmid</span></h1>
+                        <span>Gera</span></h1>
                 </div>
             </div>
             <div class="input-search">
-                <input type="search" rol="combobox" placeholder="Search for articles">
-                <input type="submit" value="">
+                <form action="" role="search">
+                    <input type="search" rol="combobox" placeholder="Search for articles">
+                    <button type="submit" value="">🗨️</button>
+                </form>
             </div>
         </header>
         <div class="wrapper-content">
             <section class="col-2_bigleft ">
-                <div class="card-post-main">
+                <article class="card-post-main">
                     <div class="card-post-main__img">
                         <img src="https://images.unsplash.com/photo-1518659526054-190340b32735?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
                             alt="unsplash images TODO">
@@ -243,9 +245,10 @@
                         </div>
                     </div>
 
-                </div>
+                </article>
 
-                <div class="card-post-capsule">
+
+                <article class="card-post-capsule">
                     <div class="capsule">
                         <div class="capsule-icon">
                             <img src="{% static 'assets/blog_icon.svg' %} " alt="">
@@ -270,10 +273,66 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </article>
 
             </section>
+            <section class="col-2_bigleft pt-4">
+                <div class="card-subscribe">
+                    <div class="card-subscribe__content">
+                        <h3>Subscribe to Newsletter</h3>
+                        <form action="">
+                            <input type="email" placeholder="Example: your@email.com" name="emailform" id="">
+                            <button type="submit" value="">✉️</button>
+                        </form>
+                    </div>
+                </div>
+                <article class="card-videothumbnail">
+                    <div class="videothumbnail">
+                        <img src="https://images.unsplash.com/photo-1510627498534-cf7e9002facc?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2F1bGlmbG93ZXJ8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="">
+                    </div>
+                    <div class="card-videothumbnail__excerpt">
+                        <p><span>👁️‍🗨️</span> 12,090</p>
+                        <h4>The benefits of Cauliflower</h4>
+                    </div>
+                </article>
+                <article class="card-videothumbnail">
+                    <div class="videothumbnail">
+                        <img src="https://images.unsplash.com/photo-1617153817979-283ffdcd52f5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGxhbnRpbmclMjB0cmVlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="">
+                    </div>
+                    <div class="card-videothumbnail__excerpt">
+                        <p><span>👁️‍🗨️</span> 44,880</p>
+                        <h4>Let us plant more this year</h4>
+                    </div>
+                </article>
+            </section>
 
+            <section class="col-2_bigleft pt-4">
+                <div class="banner">
+                    <div class="banner-wrapper-content">
+                        <div class="banner-content">
+                            <h2>Featured</h2>
+                            <h3>Natural mood regulation low or even absent in people whit depression</h3>
+                            <p class="nanner__excerpt">Mood varies from hour-to-hour and healthy mood regulation
+                                involves
+                                choosing activities theh help settle ones mood.</p>
+                        </div>
+                    </div>
+                </div>
+                <article class="card-author">
+                    <h2>Author <br> <span>of the month</span></h2>
+                    <div class="card-author__profile">
+                        <img src="https://images.unsplash.com/photo-1587492520470-8cea42e7b7fe?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGVyc29uJTIwbWVufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="">
+                        <div class="wraper-author">
+                            <p>Benjamin</p>
+                            <p>Pete jonas</p>
+                        </div>
+                        <a href="#"><span>Brief me</span><span>➡️</span></a>
+                    </div>
+                </article>
+            </section>
 
             <h1>Hola Banda que cosas 😎</h1>
             <h2>My fuck#$@ amazing Page</h2>
@@ -287,19 +346,15 @@
                 deserunt, laudantium quae mollitia unde similique est odit.</p>
             <section>
                 <h2>Lorem ipsum dolor sit amet.</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt sit sapiente dolorem, deserunt
-                    beatae
-                    modi, iure mollitia quos accusamus sunt voluptatibus odit atque libero voluptas dolor, in deleniti
-                    ipsa
-                    eos
-                    ipsam provident hic enim veritatis recusandae? Tempore repellendus amet, sint, quasi perferendis,
-                    consequatur architecto ratione nemo maxime tenetur provident esse doloremque porro quas totam
-                    distinctio
-                    aspernatur dolore? Placeat quo facilis consectetur quidem. Expedita amet tenetur placeat mollitia
-                    doloremque
-                    maiores aliquid, dolorem ullam distinctio sequi dolores alias incidunt temporibus ex reprehenderit
-                    impedit
-                    delectus quis, officiis molestiae obcaecati aut quam ipsum.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta incidunt eaque reprehenderit laborum
+                    cumque, fugiat inventore sed mollitia atque obcaecati in optio dolores tempora autem modi commodi
+                    quo ipsam blanditiis. A delectus fugit quasi quod ex itaque laborum harum in, sequi, animi autem est
+                    ullam facere quidem architecto dignissimos eligendi, adipisci ut nesciunt? Ipsa dolorem repellendus
+                    libero nulla, quia neque vitae, hic nihil odit qui optio animi error, cupiditate quae rerum ea
+                    consequatur modi eum ullam consectetur blanditiis molestias beatae! Enim harum ullam explicabo optio
+                    eligendi, quae nulla reiciendis asperiores nesciunt et odit ipsam reprehenderit officia quidem
+                    magnam voluptate quisquam. Hic, fuga exercitationem in, totam sit aperiam minus, esse ex quos
+                    tenetur quasi sunt voluptatum dolorum ut accusamus dolorem quam.</p>
                 <div>
                     <p></p>
 
