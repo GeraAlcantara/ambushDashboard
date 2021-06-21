@@ -260,7 +260,7 @@ nav {
   position: relative;
   top: -30px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
   gap: 3rem;
   width: 95%;
   margin: 0 auto; }
@@ -469,8 +469,19 @@ nav {
 .card-author {
   max-width: 165px;
   padding: 0.5rem; }
+  .card-author a {
+    display: block;
+    padding: 0.25rem;
+    color: #3355df;
+    text-decoration: none; }
+    .card-author a span {
+      font-size: 0.85rem;
+      font-weight: normal; }
   .card-author h2 {
     font-size: 1.5rem;
+    margin-top: 5px;
+    margin-left: 0.75rem;
+    margin-bottom: 0.75rem;
     color: #2f3035;
     line-height: 0.7; }
     .card-author h2 span {
@@ -478,7 +489,8 @@ nav {
       font-size: 0.75rem; }
   .card-author__profile {
     height: 175px;
-    position: relative; }
+    position: relative;
+    margin-bottom: 1rem; }
     .card-author__profile .wraper-author {
       position: absolute;
       height: 100%;

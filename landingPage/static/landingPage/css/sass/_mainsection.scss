@@ -3,7 +3,7 @@
     position: relative;
     top: -30px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
     gap: 3rem;
     width: 95%;
     margin: 0 auto;
@@ -322,8 +322,25 @@
     max-width: 165px;
     padding: 0.5rem;
 
+    a {
+        display: block;
+        padding: 0.25rem;
+        color: $accentDarkcolor;
+        text-decoration: none;
+
+        span {
+            font-size: 0.85rem;
+            font-weight: normal;
+        }
+
+    }
+
+
     h2 {
         font-size: 1.5rem;
+        margin-top: 5px;
+        margin-left: 0.75rem;
+        margin-bottom: 0.75rem;
 
         color: $hoverNavColor;
         line-height: 0.7;
@@ -337,6 +354,9 @@
     &__profile {
         height: 175px;
         position: relative;
+        margin-bottom: 1rem;
+
+
 
         .wraper-author {
             position: absolute;
