@@ -4,13 +4,17 @@
 }
 
 nav {
-    width: 100%;
-    margin-bottom: 65px;
+    width: 80%;
 
     ul {
-        width: 100%;
         list-style: none;
-        padding: unset;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        max-height: 500px;
+        min-height: 400px;
+
 
         .current {
             .wrapper-link_icon {
@@ -65,8 +69,10 @@ nav {
         }
 
         li {
-            margin: 2.5rem 0 2.5rem 0;
-            width: 100%;
+
+            .wrapper-link_text {
+                /* display: none; */
+            }
 
             a {
                 display: flex;
@@ -143,6 +149,7 @@ nav {
                     .wrapper-link_text {
                         color: $hoverNavColor;
 
+
                         span:nth-child(2) {
                             background-color: darken($hoverNavBg, 10%);
                             width: 10px;
@@ -166,7 +173,7 @@ nav {
     padding: 0.5rem 1rem;
     border-radius: 20px;
     align-items: center;
-    width: 100%;
+    width: 80%;
 
     .card-calltoAction_col {
         width: 85%;
@@ -207,5 +214,9 @@ nav {
     &_img {
         max-width: 100px;
         min-width: 50px;
+
+        svg {
+            width: 100%;
+        }
     }
 }
