@@ -1,12 +1,12 @@
 /* Main Styles */
-.col-2_bigleft {
+.row {
     position: relative;
     top: -30px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
-    gap: 3rem;
+    display: flex;
+    gap: 2rem;
     width: 95%;
     margin: 0 auto;
+    flex-wrap: wrap;
 }
 
 .card {
@@ -30,7 +30,7 @@
         display: flex;
         padding: 0.5rem;
         justify-content: space-between;
-        grid-column: 1 / 3;
+        flex: 1 1 70%;
 
         &__img {
             width: 50%;
@@ -48,7 +48,7 @@
         &__excerpt {
             max-width: 475px;
             padding-right: 2rem;
-            display: grid;
+
 
             h3 {
                 color: $NavColor;
@@ -103,16 +103,20 @@
 
     &-capsule {
         @extend .card;
+        padding: 0.5rem;
+        flex: 1 0 300px;
 
 
         .capsule {
-            width: 90%;
-            margin: 2rem auto;
+
             background-color: $accestLigthcolor;
             border-radius: 15px;
             display: flex;
             align-items: center;
             justify-content: space-evenly;
+            padding: 0.5rem;
+            margin: auto;
+
 
 
             &-icon {
@@ -123,7 +127,8 @@
 
             &-content {
                 margin-left: 1rem;
-                padding: 2rem 0;
+                padding: 1rem 0;
+                width: 90%;
 
                 h3 {
                     margin: 0;
@@ -153,13 +158,12 @@
         }
 
         .weatherInfo {
-            width: 90%;
             margin: 0 auto;
             background-color: white;
             padding-bottom: 1rem;
 
             h3 {
-                font-size: 1.5rem;
+
                 margin-bottom: 0.5rem;
 
             }
@@ -276,7 +280,6 @@
 .banner {
     @extend .card;
     padding: 0.5rem;
-    grid-column: 1 / 7;
     max-height: 285px;
 
     .banner-wrapper-content {

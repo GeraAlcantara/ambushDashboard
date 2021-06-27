@@ -1,0 +1,84 @@
+.sidebar {
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: white;
+
+    .logo_content {
+        .logo {
+            color: black;
+            display: flex;
+            height: 50px;
+            width: 100%;
+            align-items: center;
+
+            i {
+                font-size: 2rem;
+                margin-right: 0.25rem;
+            }
+
+            .logo_name {
+                font-size: 2.5rem;
+                color: black;
+                font-weight: 500;
+            }
+        }
+    }
+
+    #menu {
+        position: absolute;
+        color: black;
+        left: 90%;
+        top: 0px;
+        font-size: 1.5rem;
+        height: 50px;
+        width: 50px;
+        text-align: center;
+        line-height: 50px;
+        transform: translateX(-50%);
+    }
+
+    ul {
+        margin-top: 20px;
+
+        li {
+            height: 50px;
+            width: 100%;
+            margin: 0 0.25rem;
+            list-style: none;
+            line-height: 50px;
+
+
+
+            a {
+                color: $NavColor;
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+
+                i {
+                    height: 50px;
+                    min-width: 50px;
+                    border-radius: 12px;
+                    line-height: 50px;
+                    text-align: center;
+                    font-size: 1.75rem;
+                }
+            }
+
+        }
+
+        .current {
+            a {
+                color: black;
+
+                i {
+                    background-color: $accentDarkcolor;
+                    color: white;
+                }
+            }
+        }
+    }
+
+}
