@@ -30,7 +30,10 @@ body {
     &-content {
         background-color: $mainBG;
         border-radius: 20px 0 0 0;
-
+        display: grid;
+        grid-template-rows: 2fr 1fr 2fr;
+        align-items: flex-start;
+        height: calc(100vh - 150px);
     }
 
 
@@ -46,6 +49,7 @@ aside {
     position: sticky;
     top: 0;
     padding: 0 1rem;
+
 }
 
 main {

@@ -38,7 +38,8 @@ header {
   min-height: 125px;
   margin-left: 1rem;
   margin-right: 1rem;
-  padding-bottom: 2rem; }
+  padding-bottom: 2rem;
+  align-items: flex-start; }
 
 .grettings {
   display: flex;
@@ -99,7 +100,11 @@ body {
 
 .wrapper-content {
   background-color: #f4f7f9;
-  border-radius: 20px 0 0 0; }
+  border-radius: 20px 0 0 0;
+  display: grid;
+  grid-template-rows: 2fr 1fr 2fr;
+  align-items: flex-start;
+  height: calc(100vh - 150px); }
 
 aside {
   display: flex;
@@ -203,15 +208,15 @@ nav {
         border-radius: 50%; }
 
 /* Card Call to action */
+/* Example @include fluid-font(320px, 1024px, 22px, 55px); */
 /* Main Styles */
 .row {
-  position: relative;
-  top: -30px;
   display: flex;
   gap: 2rem;
   width: 95%;
   margin: 0 auto;
-  flex-wrap: nowrap; }
+  flex-wrap: nowrap;
+  justify-content: space-between; }
 
 .card, .card-author, .banner, .card-videothumbnail, .card-subscribe, .card-post-capsule, .card-post-main {
   background-color: white;
@@ -331,41 +336,41 @@ nav {
           margin: 0;
           color: #738998; }
 
-.card-subscribe__content {
-  padding: 1rem;
-  text-align: center; }
-
-.card-subscribe input {
-  border: none;
-  background-image: none;
-  background-color: transparent;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  background-color: #ecf0f3;
-  color: #2f3035; }
-
-.card-subscribe [type="email"] {
-  max-width: 80%;
-  padding: 0.85rem;
-  border-radius: 10px 0px 0 10px;
-  height: 40px; }
-
-.card-subscribe [type="submit"] {
-  width: 40px;
-  height: 40px;
-  padding: 10px;
-  border-radius: 10px;
-  background-color: #4c6fff;
-  position: relative;
-  left: -10px; }
+.card-subscribe {
+  flex: 1 1 100%; }
+  .card-subscribe__content {
+    padding: 1rem;
+    text-align: center; }
+  .card-subscribe input {
+    border: none;
+    background-image: none;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    background-color: #ecf0f3;
+    color: #2f3035; }
+  .card-subscribe [type="email"] {
+    width: 80%;
+    padding: 0.85rem;
+    border-radius: 10px 0px 0 10px;
+    height: 40px; }
+  .card-subscribe [type="submit"] {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #4c6fff;
+    position: relative;
+    left: -10px; }
 
 .card-videothumbnail {
+  flex: 1 1 100%;
   display: flex;
   padding: 0.5rem;
   justify-content: space-between; }
   .card-videothumbnail .videothumbnail {
-    width: 117px;
+    max-width: 40%;
     height: 117px; }
     .card-videothumbnail .videothumbnail img {
       object-fit: cover;
@@ -459,6 +464,12 @@ nav {
       height: 100%;
       border-radius: 10px; }
 
+@media only screen and (min-width: 1400px) {
+  .pos_up {
+    position: relative;
+    top: -50px; } }
+
+/* Example @include fluid-font(320px, 1024px, 22px, 55px); */
 .sidebar {
   height: 100vh;
   position: sticky;
@@ -469,8 +480,10 @@ nav {
   padding: 0 1rem;
   transition: all 0.5s ease;
   z-index: 99; }
-  .sidebar .logo_content .logo {
-    display: none; }
+  .sidebar .logo_content {
+    padding-top: 1rem; }
+    .sidebar .logo_content .logo {
+      display: none; }
   .sidebar.active {
     width: 240px; }
     .sidebar.active .logo_content .logo {
@@ -493,7 +506,7 @@ nav {
     position: absolute;
     color: black;
     left: 50%;
-    top: 0px;
+    top: 1rem;
     font-size: 1.5rem;
     height: 50px;
     width: 50px;
@@ -515,6 +528,11 @@ nav {
     opacity: 1; }
   .sidebar ul {
     padding: 4rem 0; }
+    .sidebar ul li:last-child {
+      margin-bottom: 0; }
+    @media only screen and (max-width: 799px) {
+      .sidebar ul {
+        padding: 0.5rem 0; } }
     .sidebar ul li {
       position: relative;
       height: 50px;
@@ -682,6 +700,7 @@ nav {
     .card-calltoAction_img svg {
       width: 100%; }
 
+/* Example @include fluid-font(320px, 1024px, 22px, 55px); */
 /* @keyframes scaleDown {
     from {
         transform: scale(1.08);

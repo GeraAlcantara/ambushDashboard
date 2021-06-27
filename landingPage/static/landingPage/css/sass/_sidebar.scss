@@ -1,3 +1,5 @@
+@import "mixins";
+
 .sidebar {
     height: 100vh;
     position: sticky;
@@ -11,6 +13,8 @@
     z-index: 99;
 
     .logo_content {
+        padding-top: 1rem;
+
         .logo {
             display: none;
         }
@@ -56,7 +60,7 @@
         position: absolute;
         color: black;
         left: 50%;
-        top: 0px;
+        top: 1rem;
         font-size: 1.5rem;
         height: 50px;
         width: 50px;
@@ -67,8 +71,7 @@
         background-color: white;
 
 
-        &:hover,
-            {
+        &:hover {
             background-color: $accentDarkcolor;
             color: white;
         }
@@ -102,6 +105,17 @@
     ul {
         padding: 4rem 0;
 
+        & li:last-child {
+            margin-bottom: 0;
+
+        }
+
+        @include media-max($md) {
+            padding: 0.5rem 0;
+        }
+
+
+
         li {
             position: relative;
             height: 50px;
@@ -110,6 +124,7 @@
             list-style: none;
             line-height: 50px;
             margin-bottom: 2rem;
+
 
             a {
 

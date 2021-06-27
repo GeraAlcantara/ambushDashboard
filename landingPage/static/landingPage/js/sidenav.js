@@ -3,9 +3,9 @@
 let menu = document.querySelector('#menu');
 let sidebar = document.querySelector('.sidebar')
 
-console.log(menu, sidebar);
 
-menu.addEventListener('click', function (e) {
+menu.addEventListener('click', function (event) {
+    event.preventDefault();
     sidebar.classList.toggle('active')
     console.log(e);
 })

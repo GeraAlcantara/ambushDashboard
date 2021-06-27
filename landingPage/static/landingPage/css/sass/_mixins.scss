@@ -4,15 +4,16 @@ $sm: "600px";
 $md: "799px";
 $lg: "1010px";
 $xl: "1280px";
+$xxl: "1400px";
 
 @mixin media-min($size) {
-    @media (min-width: $size) {
+    @media only screen and (min-width: $size) {
         @content;
     }
 }
 
 @mixin media-max($size) {
-    @media (max-width: $size) {
+    @media only screen and (max-width: $size) {
         @content;
     }
 }

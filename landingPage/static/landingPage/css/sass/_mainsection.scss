@@ -1,12 +1,14 @@
+@import 'mixins';
+
 /* Main Styles */
 .row {
-    position: relative;
-    top: -30px;
+
     display: flex;
     gap: 2rem;
     width: 95%;
     margin: 0 auto;
     flex-wrap: nowrap;
+    justify-content: space-between;
 }
 
 .card {
@@ -202,6 +204,7 @@
 
 .card-subscribe {
     @extend .card;
+    flex: 1 1 100%;
 
     &__content {
         padding: 1rem;
@@ -222,7 +225,7 @@
     }
 
     [type="email"] {
-        max-width: 80%;
+        width: 80%;
         padding: 0.85rem;
         border-radius: 10px 0px 0 10px;
         height: 40px;
@@ -242,12 +245,13 @@
 
 .card-videothumbnail {
     @extend .card;
+    flex: 1 1 100%;
     display: flex;
     padding: 0.5rem;
     justify-content: space-between;
 
     .videothumbnail {
-        width: 117px;
+        max-width: 40%;
         height: 117px;
 
         img {
@@ -389,4 +393,12 @@
             border-radius: 10px;
         }
     }
+}
+
+@include media-min($xxl) {
+    .pos_up {
+        position: relative;
+        top: -50px;
+    }
+
 }
