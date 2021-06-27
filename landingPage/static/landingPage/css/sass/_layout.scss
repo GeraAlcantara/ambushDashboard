@@ -6,8 +6,8 @@ body {
 
 .wrapper {
     &-page {
-        display: grid;
-        grid-template-columns: minmax(90px, 300px) repeat(auto-fit, minmax(100px, 1fr));
+        display: flex;
+        /* grid-template-columns: minmax(90px, 300px) repeat(auto-fit, minmax(100px, 1fr)); */
 
     }
 
@@ -53,28 +53,7 @@ main {
     margin-top: 1rem;
 }
 
-.profile {
-    width: 80%;
 
-    &_avatar {
-        width: 64px;
-        border-radius: 50%;
-    }
-
-    p {
-        font-size: 1.25rem;
-        font-weight: 600;
-        margin-bottom: 0.25rem;
-    }
-
-    p:last-of-type {
-        color: #6c8393;
-        font-weight: 300;
-        font-size: 1rem;
-        margin-top: 0px;
-    }
-
-}
 
 .pt {
     &-4 {
