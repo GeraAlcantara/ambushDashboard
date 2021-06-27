@@ -235,9 +235,8 @@ nav {
   justify-content: space-between;
   flex: 1 1 70%; }
   .card-post-main__img {
-    width: 50%;
-    max-height: 315px;
-    margin-right: 35px; }
+    max-height: 300px;
+    margin-right: 2.5rem; }
     .card-post-main__img img {
       width: 100%;
       border-radius: 10px;
@@ -470,6 +469,28 @@ nav {
     top: -50px; } }
 
 /* Example @include fluid-font(320px, 1024px, 22px, 55px); */
+/* active sidebar Nav */
+.sidebar.active {
+  width: 240px; }
+  .sidebar.active .logo_content .logo {
+    transition: all 0.5s ease 0.2s;
+    opacity: 1; }
+  .sidebar.active #menu {
+    left: 90%; }
+  .sidebar.active ul li .tooltip {
+    display: none !important; }
+  .sidebar.active ul li a div {
+    opacity: 1; }
+  .sidebar.active .card-calltoAction {
+    display: flex;
+    opacity: 1;
+    transition: all 0.5s ease-in-out 0.2s; }
+  .sidebar.active .profile_content #log_out {
+    left: 88%; }
+  .sidebar.active .profile_details {
+    transition: all 0.5s ease 0.2s;
+    opacity: 1; }
+
 .sidebar {
   height: 100vh;
   position: sticky;
@@ -480,15 +501,13 @@ nav {
   padding: 0 1rem;
   transition: all 0.5s ease;
   z-index: 99; }
+  @media only screen and (max-width: 1200px) {
+    .sidebar {
+      width: 100px; } }
   .sidebar .logo_content {
     padding-top: 1rem; }
     .sidebar .logo_content .logo {
       display: none; }
-  .sidebar.active {
-    width: 240px; }
-    .sidebar.active .logo_content .logo {
-      transition: all 0.5s ease 0.2s;
-      opacity: 1; }
   .sidebar .logo_content .logo {
     color: #2f3035;
     display: flex;
@@ -520,12 +539,6 @@ nav {
       color: white; }
     .sidebar #menu:focus {
       outline: solid 1px white; }
-  .sidebar.active #menu {
-    left: 90%; }
-  .sidebar.active ul li .tooltip {
-    display: none !important; }
-  .sidebar.active ul li a div {
-    opacity: 1; }
   .sidebar ul {
     padding: 4rem 0; }
     .sidebar ul li:last-child {
@@ -652,18 +665,6 @@ nav {
   .profile .job {
     color: #6c8393;
     font-size: 0.75rem; }
-
-.sidebar.active .card-calltoAction {
-  display: flex;
-  opacity: 1;
-  transition: all 0.5s ease-in-out 0.2s; }
-
-.sidebar.active .profile_content #log_out {
-  left: 88%; }
-
-.sidebar.active .profile_details {
-  transition: all 0.5s ease 0.2s;
-  opacity: 1; }
 
 .card-calltoAction {
   transition: all 0s ease;

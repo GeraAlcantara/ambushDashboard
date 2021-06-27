@@ -1,27 +1,11 @@
 @import "mixins";
+$sidebar_width: 100px;
 
+/* active sidebar Nav */
 .sidebar {
-    height: 100vh;
-    position: sticky;
-    top: 0;
-    width: 100px;
-    background-color: white;
-    padding-bottom: 1rem;
-    padding: 0 1rem;
-    transition: all 0.5s ease;
-
-    z-index: 99;
-
-    .logo_content {
-        padding-top: 1rem;
-
-        .logo {
-            display: none;
-        }
-    }
 
     &.active {
-        width: 240px;
+        width: $sidebar_width + 140px;
 
         .logo_content {
             .logo {
@@ -30,6 +14,65 @@
             }
         }
 
+        #menu {
+            left: 90%;
+        }
+
+        ul li {
+            .tooltip {
+                display: none !important;
+            }
+
+            a {
+                div {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .card-calltoAction {
+            display: flex;
+            opacity: 1;
+            transition: all 0.5s ease-in-out 0.2s;
+        }
+
+        .profile {
+            &_content {
+                #log_out {
+                    left: 88%;
+                }
+            }
+
+            &_details {
+                transition: all 0.5s ease 0.2s;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+
+.sidebar {
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    width: $sidebar_width;
+    background-color: white;
+    padding-bottom: 1rem;
+    padding: 0 1rem;
+    transition: all 0.5s ease;
+    z-index: 99;
+
+    @include media-max(1200px) {
+        width: $sidebar_width;
+    }
+
+    .logo_content {
+        padding-top: 1rem;
+
+        .logo {
+            display: none;
+        }
     }
 
     .logo_content {
@@ -79,27 +122,6 @@
         &:focus {
             outline: solid 1px white;
         }
-    }
-
-    &.active {
-
-        #menu {
-            left: 90%;
-        }
-
-        ul li {
-            .tooltip {
-                display: none !important;
-            }
-
-            a {
-                div {
-                    opacity: 1;
-                }
-            }
-        }
-
-
     }
 
     ul {
@@ -314,27 +336,6 @@
         font-size: 0.75rem;
     }
 
-}
-
-.sidebar.active {
-    .card-calltoAction {
-        display: flex;
-        opacity: 1;
-        transition: all 0.5s ease-in-out 0.2s;
-    }
-
-    .profile {
-        &_content {
-            #log_out {
-                left: 88%;
-            }
-        }
-
-        &_details {
-            transition: all 0.5s ease 0.2s;
-            opacity: 1;
-        }
-    }
 }
 
 .card-calltoAction {
