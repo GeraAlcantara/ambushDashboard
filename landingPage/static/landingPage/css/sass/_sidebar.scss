@@ -127,16 +127,13 @@ $sidebar_width: 100px;
     ul {
         padding: 4rem 0;
 
+        @media only screen and (max-width: 1024px) and (orientation: landscape) {
+            padding: 1.5rem 0;
+        }
+
         & li:last-child {
             margin-bottom: 0;
-
         }
-
-        @include media-max($md) {
-            padding: 0.5rem 0;
-        }
-
-
 
         li {
             position: relative;
@@ -147,6 +144,9 @@ $sidebar_width: 100px;
             line-height: 50px;
             margin-bottom: 2rem;
 
+            @media only screen and (min-width: 1024px) and (orientation: landscape) {
+                margin-bottom: 1rem;
+            }
 
             a {
 

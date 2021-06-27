@@ -541,11 +541,11 @@ nav {
       outline: solid 1px white; }
   .sidebar ul {
     padding: 4rem 0; }
+    @media only screen and (max-width: 1024px) and (orientation: landscape) {
+      .sidebar ul {
+        padding: 1.5rem 0; } }
     .sidebar ul li:last-child {
       margin-bottom: 0; }
-    @media only screen and (max-width: 799px) {
-      .sidebar ul {
-        padding: 0.5rem 0; } }
     .sidebar ul li {
       position: relative;
       height: 50px;
@@ -554,6 +554,9 @@ nav {
       list-style: none;
       line-height: 50px;
       margin-bottom: 2rem; }
+      @media only screen and (min-width: 1024px) and (orientation: landscape) {
+        .sidebar ul li {
+          margin-bottom: 1rem; } }
       .sidebar ul li a {
         color: #738998;
         display: flex;

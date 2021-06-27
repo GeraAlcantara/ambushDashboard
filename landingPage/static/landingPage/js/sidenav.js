@@ -1,34 +1,29 @@
 'use strict';
 
-let menu = document.querySelector('#menu');
-let sidebar = document.querySelector('#Navbar')
+const menu = document.querySelector('#menu');
+const sidebar = document.querySelector('#Navbar')
 
-
-menu.addEventListener('click', function (event) {
-    event.preventDefault();
-    sidebar.classList.toggle('active')
+const NavtoggleClass = function () {
+sidebar.classList.toggle('active')
     
-})
+}
+
+menu.addEventListener('click', NavtoggleClass)
 
 window.addEventListener('resize', function () {
-    console.log('escuchando');
-    let windowScreen = this.screen.width;
-    let windowWidth = this.window.innerWidth
-    console.log(windowScreen, windowWidth);
+    const windowScreen = this.screen.width;
+    const windowWidth = this.window.innerWidth
     if (windowScreen < 1200 || windowWidth < 1200) {
         if (!sidebar.classList.contains('active')) {
             return
         }
-        console.log('has class');
         sidebar.classList.remove('active')
     } else if (windowScreen > 1200 || windowWidth > 1200) {
         if (sidebar.classList.contains('active')) {
             return
         }
-        sidebar.classList.add('active')
-        
+        sidebar.classList.add('active')    
     }
-    
     
 })
 
