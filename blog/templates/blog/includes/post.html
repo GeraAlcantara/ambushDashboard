@@ -1,0 +1,30 @@
+{% load static %}
+
+<article>
+    <a href=" {% url 'post-details-page' post.slug %} ">
+        <div class="card-post-main">
+            <div class="card-post-main__img">
+                {% comment %} <img src=" {% static 'blog/images/'|add:post.image %}  " alt=" {{post.title}} ">
+                {% endcomment %}
+                <img src=" {{post.image }}  " alt=" {{post.title}} ">
+            </div>
+            <div class="card-post-main__excerpt">
+                <h3>{{post.title}}</h3>
+                <p class="excerpt">{{post.excerpt}} </p>
+                <div class="card-post-main__info">
+                    <div class="avatar">
+                        <img src="{{post.autorImage}} " alt="">
+                    </div>
+                    <div class="info">
+                        <address>{{post.autor}}</address>
+                        <p>{{post.date|date:'d M Y'}}</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </a>
+
+</article>

@@ -20,6 +20,10 @@
         0 41.8px 33.4px rgba(0, 0, 0, 0.086),
         0 100px 80px rgba(0, 0, 0, 0.12) */ }
 
+article a {
+  text-decoration: none;
+  color: unset; }
+
 .card-post-main {
   display: flex;
   padding: 0.5rem;
@@ -35,7 +39,10 @@
       object-fit: cover; }
   .card-post-main__excerpt {
     max-width: 475px;
-    padding-right: 2rem; }
+    padding-right: 2rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around; }
     .card-post-main__excerpt h3 {
       color: #738998;
       font-weight: 500;

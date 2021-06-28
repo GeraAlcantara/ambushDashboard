@@ -7,48 +7,17 @@
 <link rel="stylesheet" href="{% sass_src 'blog/css/blogContent.scss' %}" type="text/css">
 {% endblock css_files %}
 
+
 {% block content %}
 <main class="wrapper-main">
-    <header>
-        <div class="grettings">
+    {% include 'blog/includes/header.html' %}
 
-            <img src="{% static 'assets/sun_icon.png' %} " alt="svg solesito">
-            <div class="wrapper-grettings-name">
-                <h1>Que onda,
-                    <span>Ambush</span></h1>
-            </div>
-        </div>
-        <div class="input-search">
-            <form action="" role="search">
-                <input type="search" rol="combobox" placeholder="Search for articles">
-                <button type="submit" value="">🗨️</button>
-            </form>
-        </div>
-    </header>
     <div class="wrapper-content">
         <section class="row pos_up ">
-            <article class="card-post-main">
-                <div class="card-post-main__img">
-                    <img src="https://images.unsplash.com/photo-1518659526054-190340b32735?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                        alt="unsplash images TODO">
-                </div>
-                <div class="card-post-main__excerpt">
-                    <h3>Architecture</h3>
-                    <p class="excerpt">Ground breaking building is a classic example of mexican architecture</p>
-                    <div class="card-post-main__info">
-                        <div class="avatar">
-                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-                                alt="">
-                        </div>
-                        <div class="info">
-                            <address>Rose Roseville</address>
-                            <p>JUN 14, 2021</p>
-                        </div>
+            {% for post in latest_posts  %}
+            {% include 'blog/includes/post.html' %}
 
-                    </div>
-                </div>
-
-            </article>
+            {% endfor %}
 
 
             <article class="card-post-capsule">
@@ -139,5 +108,4 @@
 
     </div>
 </main>
-
 {% endblock content %}

@@ -26,6 +26,11 @@
         0 100px 80px rgba(0, 0, 0, 0.12) */
 }
 
+article a {
+    text-decoration: none;
+    color: unset;
+}
+
 .card-post {
 
     &-main {
@@ -51,6 +56,9 @@
         &__excerpt {
             max-width: 475px;
             padding-right: 2rem;
+            display: flex;
+            flex-flow: column;
+            justify-content: space-around;
 
 
             h3 {
@@ -201,6 +209,7 @@
             }
         }
     }
+
 }
 
 .card-subscribe {
