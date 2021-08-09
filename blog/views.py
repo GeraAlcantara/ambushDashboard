@@ -1,41 +1,10 @@
 from datetime import date
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 
-# Data muestra momentanea luego vendra de una Bases de Datos
+# import models post
+from .models import Post
 
-all_posts = [
-    {
-        'slug': 'holbox-street-art',
-        'image': 'https://images.unsplash.com/photo-1581610439579-626c987508de?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-        'autor': 'Falso personaje',
-        'autorImage': 'https://images.unsplash.com/photo-1542326529804-0cd9d861ebaa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80',
-        'date': date(2021, 6, 27),
-        'title': 'Holbox Street Art ',
-        'excerpt': 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
-        'content': 'Assumenda minus quae adipisci earum numquam. Quo nam, recusandae molestiae commodi consequuntur voluptates, excepturi molestias sint vero, nostrum quis corporis optio deserunt tenetur itaque voluptatum alias adipisci quae. Totam, voluptatem ad, quos obcaecati quod quae fugiat, incidunt optio eaque rem omnis nemo!',
-    },
-    {
-        'slug': 'recordando-la-fecha',
-        'image': 'https://source.unsplash.com/random/780x400',
-        'autor': 'EL magnanimo AmbushinMid ',
-        'autorImage': 'https://images.unsplash.com/photo-1617296539691-67feaadf389e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=624&q=80',
-        'date': date(2021, 7, 23),
-        'title': 'Un día de dolor ',
-        'excerpt': 'Quo nam, recusandae molestiae commodi consequuntur voluptates.',
-        'content': 'Assumenda minus quae adipisci earum numquam. Quo nam, recusandae molestiae commodi consequuntur voluptates, excepturi molestias sint vero, nostrum quis corporis optio deserunt tenetur itaque voluptatum alias adipisci quae. Totam, voluptatem ad, quos obcaecati quod quae fugiat, incidunt optio eaque rem omnis nemo!',
-    },
-    {
-        'slug': 'dia-de-muertos',
-        'image': 'https://images.unsplash.com/photo-1620074506951-33a51f7f454a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80',
-        'autor': 'Jr AmbushinMid de Mitgard ',
-        'autorImage': 'https://images.unsplash.com/photo-1617296539691-67feaadf389e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=624&q=80',
-        'date': date(2021, 10, 2),
-        'title': 'Dia de Muertos ',
-        'excerpt': 'Una festividad Mexicana exportada para todo el mundo',
-        'content': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas commodi quod cumque explicabo ducimus officia error a facilis voluptate. Nisi. hic inventore laudantium? Assumenda minus quae adipisci earum numquam. Quo nam, recusandae molestiae commodi consequuntur voluptates, excepturi molestias sint vero, nostrum quis corporis optio deserunt tenetur itaque voluptatum alias adipisci quae. Totam, voluptatem ad, quos obcaecati quod quae fugiat, incidunt optio eaque rem omnis nemo!',
-    }
-
-]
+all_posts = Post.objects.all().order_by('date')[:3]
 
 # Create your views here.
 
@@ -47,10 +16,7 @@ def get_date(post):
 
 
 def starting_page(request):
-
-    sorted_post = sorted(all_posts, key=get_date)
-    latest_post = sorted_post[-1:]
-    print(latest_post)
+    latest_post = Post.objects.all().order_by('date')[:1]
     return render(request, 'blog/index.html', {
         'latest_posts': latest_post
     })
@@ -63,7 +29,7 @@ def posts(request):
 
 
 def post_details(request, slug):
-    identified_post = next(post for post in all_posts if post['slug'] == slug)
+    identified_post = get_object_or_404(Post, slug=slug)
     return render(request, 'blog/post-details.html', {
         'post': identified_post
     })

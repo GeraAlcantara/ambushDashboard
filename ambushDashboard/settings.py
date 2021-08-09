@@ -45,12 +45,12 @@ INSTALLED_APPS = [
     'landingPage',
     'blog',
     'sass_processor',
-    'livereload',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'livereload',
     'django.contrib.staticfiles',
 ]
 
