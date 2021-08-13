@@ -11,19 +11,79 @@
 <main class="wrapper-main">
 
     <div class="container">
+        <img class="image-cover" src=" {{post.image.url }}  " alt=" {{post.title}} ">
         <section id="sumary">
             <article>
-                <h2>{{post.title}}</h2>
-                <img src=" {{post.image_name }}  " alt=" {{post.title}} ">
-                <address>Por {{post.autor|title}} </address>
-                <div> <span>Actualizado el <time>{{post.date|date:'d M Y'}}</time> </span>
+                <h1>{{post.title}}</h1>
+                <div class="tags">
+                    {% for tag in post_tags %}
+                    <span class="tag">{{tag.caption}} </span>
+                    {% endfor %}
                 </div>
+                <div id="read-later">
+                    <form action=" {% url 'read-later' %} " method="POST">
+                        {% csrf_token %}
+                        <input type="hidden" name="post_id" value="{{post.id}}">
+                        <button>{% if save_for_later %}
+                            Remove from Read Later
+                            {% else %}
+                            Read Later
+                            {% endif %} </button>
+                    </form>
+                </div>
+                <address>Por {{post.author.full_name}} </address>
+                <div> <span class="date">Actualizado el <time>{{post.date|date:'d M Y'}}</time> </span>
+                </div>
+
+
             </article>
         </section>
-        <section>
+
+
+        <section class="content">
             {{post.content|linebreaks}}
 
         </section>
+
+        {% if comments %}
+        <section id="comments">
+            <ul>
+
+                {% for comment in comments %}
+                <li>
+                    <h2>{{ comment.user_name | title }} </h2>
+                    <p> {{ comment.text | linebreaks }} </p>
+                </li>
+                {% endfor %}
+            </ul>
+
+        </section>
+
+        {% endif %}
+
+
+        {% if comment_form.errors %}
+        <div id="alert">
+            <h2>Saving the comment faild!</h2>
+            <p>Please check the comment form below the post and fix your errors.</p>
+        </div>
+        {% endif %}
+
+        <div id="comment-form">
+            <h2>Add your Comment</h2>
+            <form action"{% url 'post-details-page' post.slug %}" method="POST">
+                {% csrf_token %}
+                {% for form_field in comment_form %}
+                <div class="form-control {% if form_field.errors %}invalid{% endif %} ">
+                    {{ form_field.label_tag }}
+                    {{ form_field }}
+                    {{ form_field.errors }}
+                </div>
+                {% endfor %}
+                <button>Save Comment</button>
+            </form>
+        </div>
+
     </div>
 
 

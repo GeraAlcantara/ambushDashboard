@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load sass_tags %}
+{% block pageTitle %}My Stored Posts{% endblock pageTitle %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% sass_src 'blog/css/blogContent.scss' %}" type="text/css">
+{% endblock css_files %}
+
+{% block content %}
+<main class="wrapper-main">
+    <section class="container">
+        {% if not has_posts %}
+        <p>No posts found.</p>
+        {% endif %}
+        <ul>
+            {% for post in posts %}
+            <li>
+                <h2><a href="{% url 'post-details-page' post.slug %}">{{ post.title }}</a></h2>
+            </li>
+            {% endfor %}
+        </ul>
+
+    </section>
+</main>
+
+{% endblock content %}

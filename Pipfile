@@ -9,6 +9,7 @@ django-sass-processor = "*"
 django-environ = "*"
 django = "*"
 django-livereload-server = "*"
+pillow = "*"
 
 [dev-packages]
 pylint = "*"
