@@ -12,20 +12,12 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 import mimetypes
 from pathlib import Path
-import environ
+
 import os
 import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-# eviron init
-env = environ.Env(
-    # set casting, default value
-    DEBUG=(bool, False)
-)
-# reading .env file
-environ.Env.read_env()
 
 
 # Quick-start development settings - unsuitable for production
