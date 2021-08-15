@@ -10,6 +10,9 @@ django-environ = "*"
 django = "*"
 django-livereload-server = "*"
 pillow = "*"
+psycopg2-binary = "*"
+gunicorn = "*"
+django-heroku = "*"
 
 [dev-packages]
 pylint = "*"
