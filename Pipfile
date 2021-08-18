@@ -15,6 +15,7 @@ gunicorn = "*"
 django-heroku = "*"
 whitenoise = "*"
 python-decouple = "*"
+dj-database-url = "*"
 
 [dev-packages]
 pylint = "*"
