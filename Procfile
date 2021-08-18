@@ -1,1 +1,1 @@
-web: gunicorn ambushDashboard.wsgi
+web: gunicorn ambushDashboard.wsgi --log-file -
