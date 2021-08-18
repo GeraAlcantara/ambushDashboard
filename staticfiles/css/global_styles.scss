@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;900&display=swap');
+@import "sass/varibles";
+@import "sass/resets";
+@import "sass/header";
+@import "sass/layout";
+@import "sass/navdashboard";
+
+@import "sass/sidebar";
+@import "sass/mixins";
+
+
+/* @keyframes scaleDown {
+    from {
+        transform: scale(1.08);
+    }
+    to {
+        transform: scale(1);
+    }
+} */

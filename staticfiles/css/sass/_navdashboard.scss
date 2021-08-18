@@ -1,0 +1,167 @@
+/* Navigation dahsboard */
+.iconFill {
+    fill: #6C8393;
+}
+
+nav {
+    width: 80%;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        max-height: 500px;
+        min-height: 400px;
+
+
+        .current {
+            .wrapper-link_icon {
+                svg .iconFill {
+                    fill: white;
+                }
+
+                background-color: $hoverNavBg;
+
+            }
+
+            .wrapper-link_text {
+                color: $hoverNavColor;
+
+                span:nth-child(2) {
+                    background-color: $hoverNavBg;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                }
+            }
+
+            &:focus {
+                transform: scale(1.00);
+                outline: 5px solid red;
+            }
+
+
+
+            &:hover,
+            &:active {
+                .wrapper-link_icon {
+                    svg .iconFill {
+                        fill: white;
+                    }
+
+                    background-color: $hoverNavBg;
+
+                }
+
+                .wrapper-link_text {
+                    color: $hoverNavColor;
+
+                    span:nth-child(2) {
+                        background-color: $hoverNavBg;
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+
+        li {
+
+            .wrapper-link_text {
+                /* display: none; */
+            }
+
+            a {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+
+                img {
+                    width: 100%;
+                }
+
+
+                &:hover {
+                    .wrapper-link_icon {
+                        svg .iconFill {
+                            fill: white;
+                        }
+
+                        background-color: darken($hoverNavBg, 10%);
+
+                    }
+
+                    .wrapper-link_text {
+                        color: $hoverNavColor;
+
+                        span:nth-child(2) {
+                            background-color: darken($hoverNavBg, 10%);
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                        }
+                    }
+
+                }
+
+            }
+
+            &:focus {
+                transform: scale(1.08);
+                outline: none;
+
+
+                .wrapper-link_icon {
+                    svg .iconFill {
+                        fill: white;
+                    }
+
+                    background-color: darken($hoverNavBg, 10%);
+
+                }
+
+                .wrapper-link_text {
+                    color: $hoverNavColor;
+
+                    span:nth-child(2) {
+                        background-color: darken($hoverNavBg, 10%);
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                    }
+                }
+            }
+
+
+            &:active {
+                .wrapper-link_icon {
+                    svg .iconFill {
+                        fill: white;
+                    }
+
+                    background-color: darken($hoverNavBg, 10%);
+
+                }
+
+                .wrapper-link_text {
+                    color: $hoverNavColor;
+
+
+                    span:nth-child(2) {
+                        background-color: darken($hoverNavBg, 10%);
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                    }
+                }
+
+            }
+        }
+
+    }
+}
+
+/* Card Call to action */
