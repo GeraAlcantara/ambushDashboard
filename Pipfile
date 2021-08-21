@@ -16,6 +16,8 @@ django-heroku = "*"
 whitenoise = "*"
 python-decouple = "*"
 dj-database-url = "*"
+pytz = "*"
+setuptools = "*"
 
 [dev-packages]
 pylint = "*"
